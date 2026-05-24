@@ -1,0 +1,61 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+*.tfstate.lock
+crash.log
+crash.*.log
+gcpplan.binary
+gcpplan.json
+*.tfplan
+*terraform.tfstate*
+
+# Ignore actual variable values (keep .example files only)
+*.tfvars
+*.tfvars.json
+*.auto.tfvars
+*.auto.tfvars.json
+!terraform.tfvars.example
+
+# Terraform lock file (regenerate via terraform init)
+.terraform.lock.hcl
+
+# CLI config
+terraform.rc
+.terraformrc
+
+# Logs
+*.log
+tf-diagnostics.log
+
+# Secrets / credentials
+*credentials*.json
+*service_account*.json
+*gcp_key*.json
+secrets.txt
+*.pem
+*.key
+
+# Editor / OS
+.vscode/
+.idea/
+*.swp
+*.swo
+*.bak
+.DS_Store
+Thumbs.db
+
+# Generated / output files
+db_connection.txt
+output.txt
+test.txt
+
+# Nested git repositories (local module clones)
+day-10/terraform-gcp-network/.git/
+
+# Python / misc
+__pycache__/
+*.pyc
+node_modules/
+.env

@@ -1,0 +1,2 @@
+# subnets = ["subnet-alpha", "subnet-beta", "subnet-gamma"]
+subnets = ["subnet-beta", "subnet-gamma"]
