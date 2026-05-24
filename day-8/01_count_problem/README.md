@@ -1,9 +1,15 @@
-# Day 8 - Count Problem Demo
+# 01 — Count Problem Demo
 
-Demonstrates how `count` on a `list(string)` causes resources to be recreated when the list order changes.
+## Agenda
+Demonstrates how `count` on a `list(string)` causes unintended resource recreation when the list order changes.
 
 ## Usage
 ```bash
+cp terraform.tfvars.example terraform.tfvars
 terraform init
-terraform plan -var-file="terraform.tfvars"
+# Edit terraform.tfvars to reorder/remove elements, then:
+terraform plan
+terraform apply
 ```
+
+Observe: removing an element from the middle causes all subsequent resources to be destroyed and recreated due to index shifting.

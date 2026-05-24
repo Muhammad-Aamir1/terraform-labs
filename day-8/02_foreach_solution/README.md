@@ -1,9 +1,15 @@
-# Day 8 - ForEach Solution
+# 02 — ForEach Solution
 
-Demonstrates how `for_each` with `set(string)` provides stable resource addressing even when elements are reordered.
+## Agenda
+Demonstrates how `for_each` with `set(string)` provides stable resource addressing even when the set is reordered.
 
 ## Usage
 ```bash
+cp terraform.tfvars.example terraform.tfvars
 terraform init
-terraform plan -var-file="terraform.tfvars"
+# Edit terraform.tfvars to remove elements, then:
+terraform plan
+terraform apply
 ```
+
+Observe: removing an element only affects that specific resource — no unintended cascading changes.
